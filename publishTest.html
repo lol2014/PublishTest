@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>RMeCab</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+
+
+</head>
+
+<body>
+<h1>RMeCab</h1>
+
+<p>RMeCab は日本語形態素解析である MeCab と R を接続するインターフェイスです.
+RMecab は以下からダウンロードできます.</p>
+
+<p><a href="http://rmecab.jp/wiki/index.php?RMeCab">http://rmecab.jp/wiki/index.php?RMeCab</a></p>
+
+<h2>RMeCab を試す</h2>
+
+<p>&#39;&#39;&#39;{r loadLibrary}</p>
+
+<h1>RMeCab を利用する準備</h1>
+
+<p>libary (RMeCab)
+&#39;&#39;&#39;</p>
+
+<h3>文字を単位としたNgram(bigram)を生成</h3>
+
+<p>&#39;&#39;&#39;{r Ngram}</p>
+
+<h1>鴎外と漱石それぞれ4作品を含むフォルダを指定</h1>
+
+<p>res &lt;- docNgram (&ldquo;C:fromC/data/writters&rdquo;, type = 0) # writters はフォルダ名
+res2 &lt;- res[ rownames(res) %in% c(&ldquo;[と-、],[て-、],[は-、],[が-、],[で-、],[に-、],[ら-、],[も-、]&rdquo;),]
+res2
+res2.pc &lt;- princomp (t (res2))</p>
+
+<p>&#39;&#39;&#39;</p>
+
+<h3>主成分分析によるバイプロット</h3>
+
+<p>&#39;&#39;&#39;{r plot}
+biplot (res2.pc)
+&#39;&#39;&#39;</p>
+
+</body>
+
+</html>
+

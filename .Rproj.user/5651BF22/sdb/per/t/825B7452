@@ -1,0 +1,16 @@
+{
+    "contents" : "RMeCab\n==========================\nRMeCab は日本語形態素解析である MeCab と R を接続するインターフェイスです.\nRMecab は以下からダウンロードできます.\n\nhttp://rmecab.jp/wiki/index.php?RMeCab\n\nRMeCab を試す\n---------------------------\n\n'''{r loadLibrary}\n# RMeCab を利用する準備\nlibary (RMeCab)\n'''\n\n### 文字を単位としたNgram(bigram)を生成\n'''{r Ngram}\n# 鴎外と漱石それぞれ4作品を含むフォルダを指定\nres <- docNgram (\"C:fromC/data/writters\", type = 0) # writters はフォルダ名\nres2 <- res[ rownames(res) %in% c(\"[と-、],[て-、],[は-、],[が-、],[で-、],[に-、],[ら-、],[も-、]\"),]\nres2\nres2.pc <- princomp (t (res2))\n\n'''\n\n### 主成分分析によるバイプロット\n\n'''{r plot}\nbiplot (res2.pc)\n'''",
+    "created" : 1353197184672.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1586345888",
+    "id" : "825B7452",
+    "lastKnownWriteTime" : 1353200115,
+    "path" : "~/FirstProject01/publishTest.Rmd",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}
