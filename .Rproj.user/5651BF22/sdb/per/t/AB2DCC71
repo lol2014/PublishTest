@@ -1,12 +1,12 @@
 {
-    "contents" : "demo (knitr)",
+    "contents" : "z <- c(\"a\", \"b\", \"o\", \"ab\", \"a\", \"b\", \"o\", \"ab\")\nz %in% c (\"ab\", \"b\")\n",
     "created" : 1353167174684.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "3719934674",
+    "hash" : "2950481223",
     "id" : "AB2DCC71",
-    "lastKnownWriteTime" : 1353200115,
+    "lastKnownWriteTime" : 1376222401,
     "path" : "~/FirstProject01/test.R",
     "properties" : {
         "tempName" : "Untitled1"

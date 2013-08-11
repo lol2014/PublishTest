@@ -143,38 +143,7 @@ hr {
 <body>
 <h1>RMeCab</h1>
 
-<p>RMeCab は日本語形態素解析である MeCab と R を接続するインターフェイスです.
-RMecab は以下からダウンロードできます.</p>
-
-<p><a href="http://rmecab.jp/wiki/index.php?RMeCab">http://rmecab.jp/wiki/index.php?RMeCab</a></p>
-
-<h2>RMeCab を試す</h2>
-
-<p>&#39;&#39;&#39;{r loadLibrary}</p>
-
-<h1>RMeCab を利用する準備</h1>
-
-<p>libary (RMeCab)
-&#39;&#39;&#39;</p>
-
-<h3>文字を単位としたNgram(bigram)を生成</h3>
-
-<p>&#39;&#39;&#39;{r Ngram}</p>
-
-<h1>鴎外と漱石それぞれ4作品を含むフォルダを指定</h1>
-
-<p>res &lt;- docNgram (&ldquo;C:fromC/data/writters&rdquo;, type = 0) # writters はフォルダ名
-res2 &lt;- res[ rownames(res) %in% c(&ldquo;[と-、],[て-、],[は-、],[が-、],[で-、],[に-、],[ら-、],[も-、]&rdquo;),]
-res2
-res2.pc &lt;- princomp (t (res2))</p>
-
-<p>&#39;&#39;&#39;</p>
-
-<h3>主成分分析によるバイプロット</h3>
-
-<p>&#39;&#39;&#39;{r plot}
-biplot (res2.pc)
-&#39;&#39;&#39;</p>
+<p>RMeCab 縺ｯ譌･譛ｬ隱槫ｽ｢諷狗ｴ</p>
 
 </body>
 
