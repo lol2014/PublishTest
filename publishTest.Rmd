@@ -1,11 +1,11 @@
 RMeCab
 ==========================
-RMeCab は日本語形態素解析である MeCab と R を接続するインターフェイスです.
-RMecab は以下からダウンロードできます.
+RMeCab は日本語形態�?解析である MeCab と R を接続するインターフェイスで�?.
+RMecab は以下からダウンロードできま�?.
 
 http://rmecab.jp/wiki/index.php?RMeCab
 
-RMeCab を試す
+RMeCab を試�?
 ---------------------------
 
 ```{r loadLibrary}
@@ -13,18 +13,19 @@ RMeCab を試す
 libary (RMeCab)
 ```
 
-### 文字を単位としたNgram(bigram)を生成
+### �?字を単位としたNgram(bigram)を生�?
 ```{r Ngram}
-# 鴎外と漱石それぞれ4作品を含むフォルダを指定
-res <- docNgram ("C:\data\writers", type = 0) # writters はフォルダ名
-res2 <- res[ rownames(res) %in% c("[と-、],[て-、],[は-、],[が-、],[で-、],[に-、],[ら-、],[も-、]"),]
+# 鴎外と漱石それぞれ4作品を含むフォルダを指�?
+res <- docNgram ("C:\data\writers", type = 0) # writters はフォルダ�?
+res2 <- res[ rownames(res) %in% c("[と-、],[て-、],[は-、],[�?-、],[で-、],[に-、],[�?-、],[�?-、]"),]
 res2
 res2.pc <- princomp (t (res2))
 ```
 
 
-### 主成分分析によるバイプロット
+### 主成�??�?析によるバイプロ�?�?
 
 ```{r plot}
 biplot (res2.pc)
 ```
+https://github.com/lol2014/PublishTest
